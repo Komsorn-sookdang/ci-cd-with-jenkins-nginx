@@ -1,0 +1,16 @@
+version: "3"
+
+networks:
+  my-net: 
+    driver: bridge
+
+services:
+  nginx:
+    build: .
+    image: "api"
+    container_name: gate-way
+    restart: always
+    ports:
+      - 8000:8000
+    networks:
+      - my-net
