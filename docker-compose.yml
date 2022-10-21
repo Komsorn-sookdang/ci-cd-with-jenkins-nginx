@@ -2,6 +2,7 @@ version: "3"
 
 networks:
   my-net: 
+    name: nginx-network
     driver: bridge
 
 services:
@@ -11,6 +12,6 @@ services:
     container_name: gate-way
     restart: always
     ports:
-      - 8000:8000
+      - 7900:8000
     networks:
       - my-net
